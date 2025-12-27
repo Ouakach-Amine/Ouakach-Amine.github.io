@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Ouakach Amine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="lg.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #333;
+        }
+
+        .projects {
+            padding: 60px 10%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #0078ff;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: #555;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #f9f9f9;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .project-image {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.1);
+        }
+
+        .project-links {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 2;
+        }
+
+        .project-links a {
+            color: #fff;
+            font-size: 1.4rem;
+            margin-left: 10px;
+            transition: color 0.3s;
+            background: rgba(0,0,0,0.5);
+            padding: 8px;
+            border-radius: 50%;
+        }
+
+        .project-links a:hover {
+            color: #00c6ff;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            color: #0078ff;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech span {
+            display: inline-block;
+            background: #0078ff;
+            color: #fff;
+            font-size: 0.8rem;
+            padding: 5px 10px;
+            border-radius: 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .github-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #0078ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .github-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-text">Ouakach_Amine</a>
+            <ul class="nav-menu">
+                <li><a class="nav-link" href="index.html">Accueil</a></li>
+                <li><a class="nav-link" href="about.html">À propos</a></li>
+                <li><a class="nav-link" href="education.html">Formation</a></li>
+                <li><a class="nav-link" href="skills.html">Compétences</a></li>
+                <li><a class="nav-link" href="experience.html">Expérience</a></li>
+                <li><a class="nav-link active" href="projects.html">Projets</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes Projets</h2>
+                <p class="section-subtitle">Découvrez quelques-unes de mes réalisations</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Projet 1: dApp pour l'Affichage des Notes -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('images/bloclchain.jpg');">
+                        <div class="project-links">
+                            <a href="https://github.com/Ouakach-Amine/blockchain-Dapp-affichage-des-notes/tree/main" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">dApp pour l'Affichage des Notes</h3>
+                        <p class="project-description">
+                            Application décentralisée (dApp) basée sur la blockchain pour l'affichage sécurisé et transparent des notes des étudiants, intégrant Web 3.0, smart contracts et protocoles de consensus pour une gestion décentralisée des données académiques.
+                        </p>
+                        <div class="project-tech">
+                            <span>Ethereum</span>
+                            <span>Smart Contracts</span>
+                            <span>IPFS</span>
+                            <span>Web3.js</span>
+                        </div>
+                        <a href="https://github.com/Ouakach-Amine/blockchain-Dapp-affichage-des-notes/tree/main" target="_blank" class="github-link">Voir sur GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Projet 2: Remote Patient Monitoring -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('images/agent.png');">
+                        <div class="project-links">
+                            <a href="https://github.com/khoujaMedo/Application-SMA" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Remote Patient Monitoring Framework</h3>
+                        <p class="project-description">
+                            Application de télésurveillance médicale utilisant un système multi-agents (MAS) pour simuler et monitorer la fréquence cardiaque, détecter les anomalies et notifier les professionnels de santé.
+                        </p>
+                        <div class="project-tech">
+                            <span>Java</span><span>JADE</span><span>Swing</span>
+                        </div>
+                        <a href="https://github.com/khoujaMedo/Application-SMA" target="_blank" class="github-link">Voir sur GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Projet 3: Application Web de Gestion des Examens -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('images/examen.jpg');">
+                        <div class="project-links">
+                            <a href="https://github.com/khoujaMedo/gestion.examen.fpo" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Application Web de Gestion des Examens</h3>
+                        <p class="project-description">
+                            Développement d'une application web pour gérer le processus des examens : planification, inscriptions, rapports et gestion des enseignants. Déployée avec <strong>Nginx</strong> et <strong>Gunicorn</strong>.
+                        </p>
+                        <div class="project-tech">
+                            <span>Django</span><span>React</span><span>PostgreSQL</span><span>Nginx</span><span>Gunicorn</span>
+                        </div>
+                        <a href="https://github.com/khoujaMedo/gestion.examen.fpo" target="_blank" class="github-link">Voir sur GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Projet 4: Maroc Legal Assistant -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('images/assistant-juridique-droit-docial.jpg');">
+                        <div class="project-links">
+                            <a href="https://github.com/Ouakach-Amine/assistant-juridique-intelligent" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Maroc Legal Assistant</h3>
+                        <p class="project-description">
+                            Assistant juridique numérique intelligent basé sur l’IA pour faciliter l’accès à l’information juridique au Maroc. Intègre un chatbot conversationnel pour les citoyens et les juristes.
+                        </p>
+                        <div class="project-tech">
+                            <span>Django</span><span>React</span><span>Rasa</span><span>PostgreSQL</span>
+                        </div>
+                        <a href="https://github.com/Ouakach-Amine/assistant-juridique-intelligent" target="_blank" class="github-link">Voir sur GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Certificat 1: MongoDB Database Admin Path -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('images/admin.png');">
+                        <div class="project-links">
+                            <a href="certificates/amine-ouakach-f880fe9f-e771-4214-b52b-f475d571a5c9-certificate.pdf" target="_blank" class="project-link"><i class="fas fa-file-pdf"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MongoDB Database Admin Path (Self-Managed)</h3>
+                        <p class="project-description">
+                            Certificat de complétion pour le parcours MongoDB Database Admin Path (Self-Managed), obtenu le 15 août 2025. Couvre l'administration et la gestion de bases de données MongoDB en environnement auto-géré.
+                        </p>
+                        <div class="project-tech">
+                            <span>MongoDB</span>
+                            <span>Database Administration</span>
+                            <span>Self-Managed</span>
+                        </div>
+                        <a href="certificates/amine-ouakach-f880fe9f-e771-4214-b52b-f475d571a5c9-certificate.pdf" target="_blank" class="github-link">Voir le Certificat (PDF)</a>
+                    </div>
+                </div>
+
+                <!-- Certificat 2: MongoDB Python Developer Path -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('images/dev.png');">
+                        <div class="project-links">
+                            <a href="certificates/amine-ouakach-b65659d1-866c-4ae2-af01-ded378d5b47f-certificate.pdf" target="_blank" class="project-link"><i class="fas fa-file-pdf"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MongoDB Python Developer Path</h3>
+                        <p class="project-description">
+                            Certificat de complétion pour le parcours MongoDB Python Developer Path, obtenu le 20 août 2025. Formation sur le développement d'applications avec MongoDB et Python.
+                        </p>
+                        <div class="project-tech">
+                            <span>MongoDB</span>
+                            <span>Python</span>
+                            <span>Developer</span>
+                        </div>
+                        <a href="certificates/amine-ouakach-b65659d1-866c-4ae2-af01-ded378d5b47f-certificate.pdf" target="_blank" class="github-link">Voir le Certificat (PDF)</a>
+                    </div>
+                </div>
+
+                <!-- Certificat 3: MongoDB Data Modeling Path -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('images/data_modlin.png');">
+                        <div class="project-links">
+                            <a href="certificates/amine-ouakach-29896feb-2f77-4073-b1a0-a7592b2c861d-certificate.pdf" target="_blank" class="project-link"><i class="fas fa-file-pdf"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MongoDB Data Modeling Path</h3>
+                        <p class="project-description">
+                            Certificat de complétion pour le parcours MongoDB Data Modeling Path, obtenu le 11 septembre 2025. Focus sur la modélisation de données dans MongoDB.
+                        </p>
+                        <div class="project-tech">
+                            <span>MongoDB</span>
+                            <span>Data Modeling</span>
+                        </div>
+                        <a href="certificates/amine-ouakach-29896feb-2f77-4073-b1a0-a7592b2c861d-certificate.pdf" target="_blank" class="github-link">Voir le Certificat (PDF)</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-text">
+                <p>© 2025 Ouakach Amine. Tous droits réservés.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/amin-ouakach-9465a5288/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Ouakach-Amine" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
