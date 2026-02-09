@@ -96,61 +96,137 @@
             transition: width 1.8s ease-in-out;
         }
 
-        .skills-section {
-            padding: 60px 15%;
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 1s ease;
-        }
+        /* =======================
+   SKILLS SECTION (PRO)
+======================= */
 
-        .skills-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+.skills-section {
+    padding: 80px 12%;
+    background: linear-gradient(180deg, #ffffff, #f6f9ff);
+}
 
-        .section-title {
-            text-align: center;
-            color: var(--primary-color);
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
 
-        .section-subtitle {
-            text-align: center;
-            color: #555;
-            margin-bottom: 40px;
-            font-size: 1rem;
-        }
+.section-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3.5rem;
+    color: #666;
+    font-size: 1.05rem;
+}
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .skills-content {
-                grid-template-columns: 1fr;
-            }
+/* Grid */
+.skills-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.2rem;
+}
 
-            .skills-section {
-                padding: 60px 5%;
-            }
-        }
+/* Category Card */
+.skills-category {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 120, 255, 0.08);
+    border: 1px solid rgba(0, 120, 255, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
 
-        footer {
-            background: #f8f9fa;
-            padding: 1.5rem 0;
-            text-align: center;
-            color: #555;
-            border-top: 1px solid #ddd;
-        }
+.skills-category::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent, rgba(0, 120, 255, 0.05));
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
 
-        .footer-social a {
-            color: var(--primary-color);
-            margin: 0 10px;
-            font-size: 1.3rem;
-            transition: 0.3s;
-        }
+.skills-category:hover::before {
+    opacity: 1;
+}
 
-        .footer-social a:hover {
-            color: var(--accent-color);
-        }
+.skills-category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 45px rgba(0, 120, 255, 0.18);
+}
+
+/* Category Title */
+.category-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.category-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    margin: 0.6rem auto 0;
+    border-radius: 5px;
+}
+
+/* Skills as Tags */
+.skill-item {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.8s ease;
+}
+
+.skill-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-header span {
+    background: rgba(0, 120, 255, 0.1);
+    color: var(--primary-color);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.skill-header span:hover {
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .skills-section {
+        padding: 70px 6%;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -187,16 +263,14 @@
                 <div class="skills-category">
                     <h3 class="category-title">Langages de Programmation</h3>
                     <div class="skill-item">
-                        <div class="skill-header"><span>Python</span><span>70%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div>
+                        <div class="skill-header"><span>Python</span></div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-header"><span>Java / C</span><span>75%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+                        <div class="skill-header"><span>Java / C</span></div>
+                       
                     </div>
                     <div class="skill-item">
-                        <div class="skill-header"><span>Web (HTML, CSS, JS)</span><span>70%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div>
+                        <div class="skill-header"><span>Web (HTML, CSS, JS)</span></div>
                     </div>
                 </div>
 
@@ -204,16 +278,15 @@
                 <div class="skills-category">
                     <h3 class="category-title">IA & Machine Learning & Deep Learning</h3>
                     <div class="skill-item">
-                        <div class="skill-header"><span>TensorFlow / PyTorch</span><span>75%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+                        <div class="skill-header"><span>TensorFlow / PyTorch</span></div>
+                       
                     </div>
                     <div class="skill-item">
-                        <div class="skill-header"><span>Scikit-learn / Keras</span><span>75%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+                        <div class="skill-header"><span>Scikit-learn / Keras</span></div>
+                       
                     </div>
                     <div class="skill-item">
-                        <div class="skill-header"><span>NumPy / Pandas</span><span>70%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div>
+                        <div class="skill-header"><span>NumPy / Pandas</span></div>
                     </div>
                 </div>
 
@@ -221,16 +294,15 @@
                 <div class="skills-category">
                     <h3 class="category-title">Développement Web & Frameworks</h3>
                     <div class="skill-item">
-                        <div class="skill-header"><span>Django / React</span><span>85%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                        <div class="skill-header"><span>Django / React</span></div>
+
                     </div>
                     <div class="skill-item">
-                        <div class="skill-header"><span>Bases de Données (SQL, PostgreSQL, MongoDB)</span><span>75%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+                        <div class="skill-header"><span>Bases de Données (SQL, PostgreSQL, MongoDB)</span></div>
+                    
                     </div>
                     <div class="skill-item">
-                        <div class="skill-header"><span>UML Modélisation</span><span>70%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div>
+                        <div class="skill-header"><span>UML Modélisation</span></div>
                     </div>
                 </div>
 
@@ -238,16 +310,17 @@
                 <div class="skills-category">
                     <h3 class="category-title">Business Intelligence & Données</h3>
                     <div class="skill-item">
-                        <div class="skill-header"><span>Power BI / Tableau</span><span>En cour%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                        <div class="skill-header"><span>Power BI </span></div>
+                        
                     </div>
                     <div class="skill-item">
-                        <div class="skill-header"><span>ETL / OLAP / Reporting</span><span>En cour%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                        <div class="skill-header"><span>ETL</span></div>
+                        <div class="skill-header"><span>OLAP</span></div>
+                        <div class="skill-header"><span>Reporting</span></div>
+                        
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-header"><span>Entrepôts de Données</span><span>En cour%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                    <div class="skill-item">    
+                        <div class="skill-header"><span>Entrepôts de Données</span></div>
                     </div>
                 </div>
 
@@ -255,12 +328,13 @@
                 <div class="skills-category">
                     <h3 class="category-title">Big Data & Outils</h3>
                     <div class="skill-item">
-                        <div class="skill-header"><span>Hadoop / Spark</span><span>En cour%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                        <div class="skill-header"><span>Hadoop</span></div>
+                        <div class="skill-header"><span>Spark</span></div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-header"><span>Git / Talend / VS Code</span><span>90%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                        <div class="skill-header"><span>Git</span></div>
+                        <div class="skill-header"><span>VS Code</span></div>
+                        <div class="skill-header"><span>Talend</span></div>
                     </div>
                 </div>
 
